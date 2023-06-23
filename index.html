@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ROCK | PAPER | SCISSORS</title>
+    <link
+      rel="shortcut icon"
+      href="./images/dress-code.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="box-container">
+      <div class="box">
+        <section class="header">
+          <div class="title">
+            <span class="heading">rock</span>
+            <span class="heading">paper</span>
+            <span class="heading">scissors</span>
+          </div>
+          <div class="output">
+            <span class="user-score" id="user-score">user: 0</span>
+            <span class="comp-score" id="comp-score">computer: 0</span>
+          </div>
+        </section>
+        <section class="btn-container">
+          <button class="btn btn-rock" id="btn-rock">
+            <i class="fa-solid fa-hand-back-fist"></i>
+          </button>
+          <button class="btn btn-paper" id="btn-paper">
+            <i class="fa-solid fa-hand"></i>
+          </button>
+          <button class="btn btn-scissors" id="btn-scissors">
+            <i class="fa-solid fa-hand-scissors"></i>
+          </button>
+        </section>
+        <section class="display-container">
+          <p class="result">
+            You Choose <span class="ans" id="ans">Rock</span>
+          </p>
+          <p class="result">
+            Computer Choose <span class="ans" id="ans">Scissors</span>
+          </p>
+          <p class="result" id="result">You Win</p>
+        </section>
+      </div>
+    </div>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>

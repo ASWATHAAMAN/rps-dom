@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+:root {
+  --clr-oxford-blue: hsla(212, 100%, 17%, 1);
+  --clr-oxford-blue-3: hsla(219, 100%, 10%, 1);
+  --clr-delft-blue: hsla(220, 29%, 28%, 1);
+  --clr-slate-gray: hsla(222, 11%, 54%, 1);
+  --clr-cherry-blossom-pink: hsla(345, 100%, 85%, 1);
+  --clr-bakermiller-pink: hsla(345, 100%, 78%, 1);
+  --clr-russian-violet: hsla(255, 45%, 18%, 1);
+  --clr-lilac: hsla(292, 28%, 68%, 1);
+  --clr-cornsilk: hsla(52, 94%, 94%, 1);
+  --clr-earth-yellow: hsla(32, 65%, 62%, 1);
+  --clr-tigers-eye: hsla(28, 67%, 44%, 1);
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--clr-tigers-eye);
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.box-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.box {
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 12px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem auto;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+}
+.heading {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 22px;
+}
+.output {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+}
+.value {
+  font-weight: 700;
+}
+.btn-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.btn {
+  padding: 1rem;
+  border-radius: 50%;
+  font-size: 2.2rem;
+  margin: 1rem;
+  background-color: var(--clr-russian-violet);
+  color: var(--clr-lilac);
+}
+.display-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+  font-size: 18px;
+  visibility: hidden;
+}
+.ans {
+  font-weight: 900;
+}
