@@ -37,10 +37,11 @@ const getResult = function (userSelect) {
 // event listeners
 btnRockEl.addEventListener(`click`, () => {
   // console.log(getResult(rock));
-  const output = getResult(rock);
+  const output = getResult(`rock`);
   console.log(output);
   console.log(`user selected: ${userSelect}`);
   console.log(`computer selected: ${computerSelect}`);
 });
+
 
 // init settings
