@@ -92,7 +92,7 @@ img {
   padding: 1rem;
   gap: 1rem;
   font-size: 18px;
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 .ans {
   font-weight: 900;
