@@ -8,11 +8,13 @@ const btnScissorsEl = document.getElementById(`btn-scissors`);
 const userChoiceEl = document.getElementById(`user-choice`);
 const compChoiceEl = document.getElementById(`computer-choice`);
 const resultEl = document.getElementById(`result`);
+const displayContainerEl = document.getElementById(`display-container`);
 
 // global variables
 let userScore;
 let compScore;
 let result;
+let computerSelect;
 // functions
 const getCompChoice = () => {
   weapons = [`rock`, `paper`, `scissors`];
@@ -21,27 +23,56 @@ const getCompChoice = () => {
 };
 
 const getResult = function (userSelect) {
-  const computerSelect = getCompChoice();
+  computerSelect = getCompChoice();
   if (userSelect === computerSelect) {
-    result = `game draw`;
+    result = `draw`;
   } else if (
     (userSelect === `rock` && computerSelect === `scissors`) ||
     (userSelect === `paper` && computerSelect === `rock`) ||
     (userSelect === `scissors` && computerSelect === `paper`)
   ) {
-    result = `game won`;
+    result = `won`;
   } else {
-    result = `game lost`;
+    result = `lost`;
   }
+  userChoiceEl.innerText = userSelect;
+  compChoiceEl.innerText = computerSelect;
+  resultEl.innerText = `you ${result}`;
+  resultEl.style.display = `flex`;
+  return result;
 };
 // event listeners
-btnRockEl.addEventListener(`click`, () => {
+btnRockEl.addEventListener(`click`, function () {
+  displayContainerEl.classList.remove(`close`);
+  displayContainerEl.classList.add(`open`);
+  const userSelect = this.value;
   // console.log(getResult(rock));
-  const output = getResult(`rock`);
-  console.log(output);
+  const output = getResult(userSelect);
   console.log(`user selected: ${userSelect}`);
   console.log(`computer selected: ${computerSelect}`);
+  console.log(`Result: ${output}`);
 });
 
+btnPaperEl.addEventListener(`click`, function () {
+  displayContainerEl.classList.remove(`close`);
+  displayContainerEl.classList.add(`open`);
+  const userSelect = this.value;
+  // console.log(getResult(rock));
+  const output = getResult(userSelect);
+  console.log(`user selected: ${userSelect}`);
+  console.log(`computer selected: ${computerSelect}`);
+  console.log(`Result: ${output}`);
+});
+
+btnScissorsEl.addEventListener(`click`, function () {
+  displayContainerEl.classList.remove(`close`);
+  displayContainerEl.classList.add(`open`);
+  const userSelect = this.value;
+  // console.log(getResult(rock));
+  const output = getResult(userSelect);
+  console.log(`user selected: ${userSelect}`);
+  console.log(`computer selected: ${computerSelect}`);
+  console.log(`Result: ${output}`);
+});
 
 // init settings
